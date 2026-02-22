@@ -11,18 +11,23 @@
         body { font-family: 'Lexend', sans-serif; }
         .taxi-yellow { background-color: #facc15; }
         .taxi-dark { background-color: #1c1c1c; }
+        .glow { box-shadow: 0 0 15px rgba(250, 204, 21, 0.4); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header đơn giản -->
-    <header class="taxi-dark text-white py-4 shadow-md">
+    <!-- Header có nút gọi nhanh -->
+    <header class="taxi-dark text-white py-3 sticky top-0 z-50 shadow-md">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <i data-lucide="arrow-left" class="text-yellow-400 w-6 h-6"></i>
-                <span class="font-bold text-lg uppercase">Quay lại trang chủ</span>
+            <a href="index.html" class="flex items-center space-x-2 group">
+                <i data-lucide="arrow-left" class="text-yellow-400 w-6 h-6 group-hover:-translate-x-1 transition-transform"></i>
+                <span class="font-bold text-sm md:text-base uppercase tracking-tight">Trang chủ</span>
             </a>
-            <div class="text-yellow-400 font-bold">0854.593.879</div>
+            
+            <a href="tel:0854593879" class="taxi-yellow text-black px-4 py-2 rounded-full font-bold flex items-center space-x-2 hover:bg-yellow-300 transition scale-105 shadow-lg">
+                <i data-lucide="phone-call" class="w-4 h-4"></i>
+                <span class="text-sm md:text-base">0854.593.879</span>
+            </a>
         </div>
     </header>
 
@@ -31,63 +36,80 @@
         <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
             <h1 class="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900 border-b pb-4">Chính sách quyền riêng tư</h1>
             
-            <div class="space-y-8 leading-relaxed">
+            <div class="space-y-8 leading-relaxed text-gray-700">
                 <section>
                     <h2 class="text-xl font-bold mb-4 flex items-center text-yellow-600">
-                        <i data-lucide="shield-check" class="w-6 h-6 mr-2"></i> 1. Thu thập thông tin cá nhân
+                        <i data-lucide="shield-check" class="w-6 h-6 mr-2 text-yellow-500"></i> 1. Thu thập thông tin cá nhân
                     </h2>
                     <p>Khi quý khách sử dụng dịch vụ hoặc đặt xe qua website **Taxi Buôn Hồ**, chúng tôi có thể thu thập các thông tin sau:</p>
-                    <ul class="list-disc ml-6 mt-2 space-y-1">
-                        <li>Họ và tên khách hàng.</li>
-                        <li>Số điện thoại liên lạc.</li>
-                        <li>Địa chỉ điểm đón và điểm đến.</li>
+                    <ul class="list-disc ml-6 mt-3 space-y-2">
+                        <li>Họ và tên khách hàng để tiện xưng hô.</li>
+                        <li>Số điện thoại liên lạc để tài xế gọi xác nhận.</li>
+                        <li>Địa chỉ điểm đón và điểm đến để định vị lộ trình.</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2 class="text-xl font-bold mb-4 flex items-center text-yellow-600">
-                        <i data-lucide="eye" class="w-6 h-6 mr-2"></i> 2. Mục đích sử dụng thông tin
+                        <i data-lucide="eye" class="w-6 h-6 mr-2 text-yellow-500"></i> 2. Mục đích sử dụng thông tin
                     </h2>
                     <p>Thông tin của quý khách chỉ được sử dụng cho các mục đích:</p>
-                    <ul class="list-disc ml-6 mt-2 space-y-1">
-                        <li>Xác nhận yêu cầu đặt xe và điều phối tài xế gần nhất.</li>
-                        <li>Liên hệ thông báo về lộ trình và thời gian xe đến.</li>
-                        <li>Nâng cao chất lượng phục vụ và giải quyết khiếu nại (nếu có).</li>
+                    <ul class="list-disc ml-6 mt-3 space-y-2">
+                        <li>Xác nhận yêu cầu đặt xe nhanh chóng.</li>
+                        <li>Điều phối tài xế gần nhất để tiết kiệm thời gian chờ đợi.</li>
+                        <li>Nâng cao chất lượng phục vụ khách hàng tại khu vực Buôn Hồ.</li>
                     </ul>
                 </section>
 
-                <section>
-                    <h2 class="text-xl font-bold mb-4 flex items-center text-yellow-600">
-                        <i data-lucide="lock" class="w-6 h-6 mr-2"></i> 3. Bảo mật thông tin
+                <section class="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center text-gray-900">
+                        <i data-lucide="lock" class="w-6 h-6 mr-2 text-yellow-500"></i> 3. Bảo mật thông tin
                     </h2>
-                    <p>Chúng tôi cam kết bảo mật tuyệt đối thông tin cá nhân của quý khách. Chúng tôi không bán, chia sẻ hay trao đổi thông tin khách hàng cho bất kỳ bên thứ ba nào vì mục đích thương mại.</p>
+                    <p>Chúng tôi cam kết bảo mật tuyệt đối thông tin cá nhân của quý khách. Chúng tôi không bao giờ chia sẻ thông tin khách hàng cho bất kỳ bên thứ ba nào vì mục đích quảng cáo hay thương mại.</p>
                 </section>
 
                 <section>
                     <h2 class="text-xl font-bold mb-4 flex items-center text-yellow-600">
-                        <i data-lucide="phone" class="w-6 h-6 mr-2"></i> 4. Liên hệ hỗ trợ
+                        <i data-lucide="phone" class="w-6 h-6 mr-2 text-yellow-500"></i> 4. Liên hệ hỗ trợ
                     </h2>
-                    <p>Nếu quý khách có bất kỳ thắc mắc nào về chính sách quyền riêng tư, vui lòng liên hệ trực tiếp qua hotline:</p>
-                    <div class="mt-4 p-4 bg-yellow-50 rounded-xl border border-yellow-200 inline-block">
-                        <p class="font-bold text-lg text-gray-900">Hotline: 0854.593.879</p>
-                        <p class="text-sm text-gray-600">Địa chỉ: Thị xã Buôn Hồ, Tỉnh Đắk Lắk</p>
+                    <p>Nếu quý khách có thắc mắc về chính sách hoặc cần đặt xe gấp, vui lòng gọi trực tiếp:</p>
+                    <div class="mt-6 flex flex-col sm:flex-row items-center gap-4">
+                        <div class="p-5 bg-taxi-dark taxi-dark text-white rounded-2xl border border-gray-700 w-full sm:w-auto text-center">
+                            <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Tổng đài 24/7</p>
+                            <p class="text-2xl font-bold text-yellow-400">0854.593.879</p>
+                        </div>
+                        <a href="tel:0854593879" class="taxi-yellow text-black font-bold px-8 py-4 rounded-2xl hover:bg-yellow-300 transition shadow-xl flex items-center justify-center space-x-2 w-full sm:w-auto">
+                            <i data-lucide="phone-forwarded" class="w-5 h-5"></i>
+                            <span>GỌI ĐẶT XE NGAY</span>
+                        </a>
                     </div>
                 </section>
             </div>
 
-            <div class="mt-12 pt-8 border-t text-sm text-gray-500 italic text-center">
-                Cập nhật lần cuối: Tháng 2 năm 2024
+            <div class="mt-12 pt-8 border-t text-sm text-gray-400 italic text-center">
+                Cập nhật lần cuối: Tháng 2 năm 2025
             </div>
         </div>
     </main>
 
     <!-- Footer đơn giản -->
-    <footer class="bg-gray-100 py-8 border-t">
+    <footer class="bg-gray-100 py-10 border-t">
         <div class="container mx-auto px-4 text-center">
-            <p class="font-bold text-gray-700">&copy; 2025 Taxi Buôn Hồ - 0854.593.879</p>
-            <p class="text-sm text-gray-500 mt-2">Dịch vụ taxi uy tín, an toàn và chuyên nghiệp tại Đắk Lắk.</p>
+            <div class="flex items-center justify-center space-x-2 mb-4">
+                <i data-lucide="car" class="text-yellow-500 w-6 h-6"></i>
+                <span class="font-bold text-gray-800 uppercase tracking-tighter">Taxi Buôn Hồ</span>
+            </div>
+            <p class="font-bold text-gray-700">0854.593.879</p>
+            <p class="text-sm text-gray-500 mt-2">Phục vụ tận tâm - An toàn trên mọi nẻo đường.</p>
         </div>
     </footer>
+
+    <!-- Mobile Sticky Call Button (Giống trang chủ) -->
+    <div class="md:hidden fixed bottom-8 right-6 z-50">
+        <a href="tel:0854593879" class="taxi-yellow text-black w-16 h-16 rounded-full flex items-center justify-center shadow-2xl glow ring-4 ring-yellow-400/20 animate-bounce">
+            <i data-lucide="phone" class="w-8 h-8"></i>
+        </a>
+    </div>
 
     <script>
         lucide.createIcons();
