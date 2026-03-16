@@ -3,169 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taxi Buôn Hồ Đắk Lắk - Dịch Vụ Xe 4-7 Chỗ Giá Rẻ 24/7 - 0854.593.879</title>
-    <meta name="description" content="Tổng đài Taxi Buôn Hồ chuyên nghiệp. Xe đời mới 4 chỗ, 7 chỗ phục vụ TX Buôn Hồ, Krông Búk, Krông Năng. Giá cước rẻ, tài xế bản địa thông thạo đường xá.">
+    <title>Taxi Buôn Hồ 24/7 - Dịch vụ Taxi Uy Tín Số 1 Đắk Lắk</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
         body { font-family: 'Lexend', sans-serif; scroll-behavior: smooth; }
-        .taxi-yellow { background-color: #facc15; }
-        .taxi-dark { background-color: #111827; }
-        .glow { box-shadow: 0 0 20px rgba(250, 204, 21, 0.4); }
-        /* Hiệu ứng mượt cho các phần tử */
-        .fade-in { animation: fadeIn 1s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .bg-taxi-yellow { background-color: #facc15; }
+        .text-taxi-yellow { color: #facc15; }
+        .btn-taxi { background-color: #facc15; color: #000; transition: all 0.3s; border: 2px solid #facc15; }
+        .btn-taxi:hover { background-color: transparent; color: #facc15; transform: translateY(-2px); }
+        .card-hover:hover { transform: translateY(-10px); border-color: #facc15; }
+        
+        @keyframes pulse-yellow {
+            0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(250, 204, 21, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
+        }
+        .animate-pulse-yellow { animation: pulse-yellow 2s infinite; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-black text-gray-200">
 
-    <!-- Topbar Thông báo -->
-    <div class="bg-yellow-400 py-1.5 text-center text-[10px] md:text-xs font-bold uppercase tracking-widest px-4 border-b border-yellow-500">
-        Phục vụ xuyên đêm - Có mặt ngay sau 5-10 phút gọi tại Buôn Hồ
-    </div>
-
-    <!-- Navigation -->
-    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 shadow-sm">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="bg-yellow-400 p-1.5 rounded-lg shadow-inner">
-                    <i data-lucide="car" class="text-slate-900 w-6 h-6"></i>
-                </div>
-                <span class="text-xl font-black tracking-tighter italic">TAXI <span class="text-yellow-500">BUÔN HỒ</span></span>
-            </div>
-            <a href="tel:0854593879" class="bg-slate-900 text-white px-5 py-2 rounded-full font-bold flex items-center space-x-2 hover:bg-slate-800 transition shadow-lg active:scale-95">
-                <i data-lucide="phone-call" class="w-4 h-4 text-yellow-400"></i>
-                <span class="text-sm">0854.593.879</span>
-            </a>
-        </div>
-    </header>
-
-    <!-- Hero Section (Đã sửa để không phụ thuộc ảnh lỗi) -->
-    <section class="relative min-h-[60vh] flex items-center taxi-dark text-white overflow-hidden">
-        <!-- Thay ảnh bằng nền Gradient sang trọng -->
-        <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-slate-800 to-yellow-900/20"></div>
-        <div class="container mx-auto px-4 relative z-10 py-16 text-center">
-            <div class="inline-block px-4 py-1 rounded-full border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-bold mb-6">
-                HTX VẬN TẢI TAXI BUÔN HỒ
-            </div>
-            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight">Taxi Buôn Hồ <br><span class="text-yellow-400">0854.593.879</span></h1>
-            <p class="text-lg md:text-xl mb-10 text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">Đón khách nhanh chóng tại mọi khu vực Thị xã Buôn Hồ, Krông Búk, Krông Năng. Xe đời mới 2024 sạch sẽ, sang trọng.</p>
-            <div class="flex justify-center">
-                <a href="tel:0854593879" class="taxi-yellow text-slate-900 px-10 py-5 rounded-2xl font-black text-xl flex items-center space-x-4 shadow-2xl glow hover:scale-105 transition-all">
-                    <i data-lucide="phone" class="w-7 h-7 animate-pulse"></i>
-                    <span>BẤM GỌI XE NGAY</span>
+    <!-- Header / Navigation -->
+    <nav class="fixed w-full z-50 bg-black/95 border-b border-gray-800 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="bg-taxi-yellow p-2 rounded-lg">
+                        <i class="fas fa-taxi text-black text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold tracking-tighter text-white leading-none uppercase">Taxi <span class="text-taxi-yellow">Buôn Hồ</span></span>
+                        <span class="text-[10px] text-gray-400 tracking-[0.2em] uppercase">Phục vụ tận tâm 24/7</span>
+                    </div>
                 </a>
+                
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html" class="text-taxi-yellow font-medium transition">Trang chủ</a>
+                    <a href="#about" class="hover:text-taxi-yellow font-medium transition">Giới thiệu</a>
+                    <a href="#services" class="hover:text-taxi-yellow font-medium transition">Dịch vụ</a>
+                    <a href="#prices" class="hover:text-taxi-yellow font-medium transition">Bảng giá</a>
+                    <a href="#faq" class="hover:text-taxi-yellow font-medium transition">Hỏi đáp</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="tel:0972138242" class="btn-taxi hidden sm:flex px-6 py-2.5 rounded-full font-bold text-sm items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> 0972.138.242
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-24 lg:pt-56 lg:pb-48 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-block px-4 py-1 rounded-full border border-taxi-yellow text-taxi-yellow text-sm font-bold mb-6 tracking-widest uppercase">Tổng đài Taxi Buôn Hồ</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                    AN TOÀN TRÊN <br>
+                    <span class="text-taxi-yellow">MỌI NẺO ĐƯỜNG</span>
+                </h1>
+                <p class="text-gray-400 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+                    Đội ngũ tài xế chuyên nghiệp, giàu kinh nghiệm tại Buôn Hồ. Cam kết mang đến trải nghiệm di chuyển thoải mái, an toàn và đúng giờ nhất cho quý khách.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="tel:0972138242" class="btn-taxi px-10 py-5 rounded-2xl text-xl font-black shadow-2xl animate-pulse-yellow flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-3"></i> GỌI XE NGAY
+                    </a>
+                    <a href="https://zalo.me/0972138242" target="_blank" class="bg-zinc-900 border border-gray-700 hover:border-taxi-yellow text-white px-10 py-5 rounded-2xl text-xl font-bold transition flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-3 text-blue-400"></i> CHAT ZALO
+                    </a>
+                </div>
+            </div>
+            <div class="hidden lg:block relative">
+                <div class="absolute -top-20 -right-20 w-96 h-96 bg-taxi-yellow/20 rounded-full blur-[100px]"></div>
+                <img src="https://images.unsplash.com/photo-1510605395823-530474d7490f?auto=format&fit=crop&q=80&w=800" alt="Taxi Buôn Hồ" class="rounded-3xl shadow-2xl border border-gray-800 rotate-2">
             </div>
         </div>
     </section>
 
-    <!-- Cam kết (Phần bạn chụp ảnh) -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8 text-left">
-                    <h2 class="text-3xl font-black leading-tight border-l-8 border-yellow-400 pl-4 uppercase">Cam kết dịch vụ</h2>
-                    
-                    <div class="flex items-start space-x-5 group">
-                        <div class="bg-yellow-100 p-4 rounded-2xl group-hover:bg-yellow-400 transition-colors">
-                            <i data-lucide="badge-dollar-sign" class="text-yellow-600 group-hover:text-slate-900 w-8 h-8"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-xl mb-1">Giá Cước Công Khai</h4>
-                            <p class="text-slate-500 text-sm md:text-base leading-relaxed">Luôn báo giá trước khi khởi hành. Cam kết không thu thêm bất kỳ phụ phí nào ngoài hợp đồng đã thỏa thuận.</p>
-                        </div>
+    <!-- Why Choose Us -->
+    <section id="about" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tight">Tại sao nên chọn <span class="text-taxi-yellow">chúng tôi?</span></h2>
+                <p class="text-gray-500">Chúng tôi không chỉ chở bạn đi, chúng tôi chăm sóc từng mét đường của bạn bằng sự tận tâm nhất.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-black p-8 rounded-2xl border border-gray-900 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-taxi-yellow/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-taxi-yellow text-2xl"></i>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-3">An Toàn Tuyệt Đối</h3>
+                    <p class="text-gray-500 text-sm">Lái xe được tuyển chọn kỹ lưỡng, có giấy phép và kinh nghiệm lâu năm, luôn điềm đạm và cẩn thận.</p>
+                </div>
+                <div class="bg-black p-8 rounded-2xl border border-gray-900 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-taxi-yellow/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-taxi-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Đúng Giờ - Nhanh Chóng</h3>
+                    <p class="text-gray-500 text-sm">Với hệ thống xe phủ khắp Buôn Hồ, chúng tôi có mặt chỉ từ 5-10 phút sau khi nhận cuộc gọi.</p>
+                </div>
+                <div class="bg-black p-8 rounded-2xl border border-gray-900 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-taxi-yellow/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tags text-taxi-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Giá Cước Cạnh Tranh</h3>
+                    <p class="text-gray-500 text-sm">Minh bạch về giá cả, không thu thêm phí ẩn, giá rẻ hơn so với các hãng taxi truyền thống.</p>
+                </div>
+                <div class="bg-black p-8 rounded-2xl border border-gray-900 card-hover transition-all duration-300">
+                    <div class="w-14 h-14 bg-taxi-yellow/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-car text-taxi-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Xe Đời Mới</h3>
+                    <p class="text-gray-500 text-sm">Sử dụng các dòng xe 4 chỗ, 7 chỗ hiện đại, nội thất sạch sẽ, không mùi, đầy đủ tiện nghi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="flex items-start space-x-5 group">
-                        <div class="bg-yellow-100 p-4 rounded-2xl group-hover:bg-yellow-400 transition-colors">
-                            <i data-lucide="sparkles" class="text-yellow-600 group-hover:text-slate-900 w-8 h-8"></i>
+    <!-- Booking Process -->
+    <section class="py-24 bg-black border-y border-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-white text-center mb-16 uppercase">Quy trình <span class="text-taxi-yellow">đặt xe đơn giản</span></h2>
+            <div class="grid md:grid-cols-3 gap-12 relative">
+                <div class="text-center relative z-10">
+                    <div class="w-20 h-20 bg-taxi-yellow rounded-full flex items-center justify-center text-black text-3xl font-bold mx-auto mb-6">1</div>
+                    <h4 class="text-xl font-bold mb-3">Gọi điện / Nhắn tin</h4>
+                    <p class="text-gray-500">Liên hệ Hotline 0972.138.242 hoặc qua Zalo.</p>
+                </div>
+                <div class="text-center relative z-10">
+                    <div class="w-20 h-20 bg-taxi-yellow rounded-full flex items-center justify-center text-black text-3xl font-bold mx-auto mb-6">2</div>
+                    <h4 class="text-xl font-bold mb-3">Xác nhận lịch trình</h4>
+                    <p class="text-gray-500">Chúng tôi báo giá trọn gói và thời gian xe đến đón.</p>
+                </div>
+                <div class="text-center relative z-10">
+                    <div class="w-20 h-20 bg-taxi-yellow rounded-full flex items-center justify-center text-black text-3xl font-bold mx-auto mb-6">3</div>
+                    <h4 class="text-xl font-bold mb-3">Lên xe và trải nghiệm</h4>
+                    <p class="text-gray-500">Tài xế đón tận nơi và đưa bạn đến điểm đích an toàn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Detailed -->
+    <section id="services" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-4xl font-bold text-white mb-4 uppercase">Dịch vụ đa dạng <br><span class="text-taxi-yellow">Đáp ứng mọi nhu cầu</span></h2>
+                        <div class="h-1 w-20 bg-taxi-yellow"></div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-taxi-yellow mt-1"><i class="fas fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Taxi Gia Đình - Cá Nhân</h4>
+                                <p class="text-gray-500">Phục vụ nhu cầu đi lại hàng ngày, khám chữa bệnh, mua sắm.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-xl mb-1">Xe Sang Sạch Sẽ</h4>
-                            <p class="text-slate-500 text-sm md:text-base leading-relaxed">Hệ thống xe 4-7 chỗ đời mới (Vios, Accent, Xpander) được bảo trì thường xuyên, không mùi hôi, máy lạnh tốt.</p>
+                        <div class="flex items-start gap-4">
+                            <div class="text-taxi-yellow mt-1"><i class="fas fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Taxi Sân Bay Buôn Ma Thuột</h4>
+                                <p class="text-gray-600 font-medium">Giá trọn gói từ Buôn Hồ đi Sân bay cực ưu đãi.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-taxi-yellow mt-1"><i class="fas fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Hợp Đồng Tham Quan - Du Lịch</h4>
+                                <p class="text-gray-500">Cho thuê xe theo ngày, theo tour đi các điểm du lịch tại Đắk Lắk.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-taxi-yellow mt-1"><i class="fas fa-check-circle text-xl"></i></div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Taxi Đường Dài Giá Rẻ</h4>
+                                <p class="text-gray-500">Càng đi xa giá càng rẻ, ưu đãi giảm giá sâu cho chiều về.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=400" alt="Dịch vụ taxi" class="rounded-2xl border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1549423051-197758296792?auto=format&fit=crop&q=80&w=400" alt="Xe taxi 4 chỗ" class="rounded-2xl border border-gray-800 mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Chỗ này đã thay bằng khối Box chuyên nghiệp thay vì để ảnh lỗi -->
-                <div class="relative p-8 md:p-12 bg-slate-900 rounded-[2.5rem] text-white shadow-2xl overflow-hidden border-4 border-yellow-400">
-                    <div class="relative z-10">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <i data-lucide="map-pin" class="text-yellow-400 w-6 h-6"></i>
-                            <span class="font-bold uppercase tracking-widest text-sm">Khu vực phục vụ chính</span>
+    <!-- Pricing -->
+    <section id="prices" class="py-24 bg-black">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white uppercase mb-2 underline decoration-taxi-yellow underline-offset-8">Bảng Giá Công Khai</h2>
+                <p class="text-gray-500 mt-4">Cam kết không thu thêm bất kỳ phụ phí nào ngoài hợp đồng.</p>
+            </div>
+            <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-gray-800 shadow-2xl">
+                <div class="p-8">
+                    <div class="space-y-6 text-lg">
+                        <div class="flex justify-between border-b border-gray-800 pb-4">
+                            <span class="text-gray-300 font-medium">Mở cửa (km đầu tiên)</span>
+                            <span class="text-taxi-yellow font-bold">15.000đ</span>
                         </div>
-                        <ul class="space-y-4 font-medium text-lg">
-                            <li class="flex items-center space-x-3"><i data-lucide="check-circle" class="text-yellow-400 w-5 h-5"></i> <span>TX Buôn Hồ (Nội thành & Ngoại ô)</span></li>
-                            <li class="flex items-center space-x-3"><i data-lucide="check-circle" class="text-yellow-400 w-5 h-5"></i> <span>Huyện Krông Búk (Pơng Drang, Chư Kpô)</span></li>
-                            <li class="flex items-center space-x-3"><i data-lucide="check-circle" class="text-yellow-400 w-5 h-5"></i> <span>Huyện Krông Năng</span></li>
-                            <li class="flex items-center space-x-3"><i data-lucide="check-circle" class="text-yellow-400 w-5 h-5"></i> <span>Tuyến Sân Bay Buôn Ma Thuột</span></li>
-                        </ul>
-                        <div class="mt-10 p-4 bg-yellow-400/10 rounded-xl border border-yellow-400/20">
-                            <p class="text-yellow-400 text-sm italic italic font-light">"Phục vụ bà con tận tình, đón đúng giờ, lái xe an toàn là niềm hạnh phúc của chúng tôi."</p>
+                        <div class="flex justify-between border-b border-gray-800 pb-4">
+                            <span class="text-gray-300 font-medium">Từ km thứ 2 đến km 20</span>
+                            <span class="text-taxi-yellow font-bold">13.000đ/km</span>
                         </div>
-                    </div>
-                    <!-- Họa tiết trang trí -->
-                    <div class="absolute -right-10 -bottom-10 opacity-10">
-                        <i data-lucide="car" class="w-48 h-48"></i>
+                        <div class="flex justify-between border-b border-gray-800 pb-4">
+                            <span class="text-gray-300 font-medium">Từ km thứ 21 trở đi</span>
+                            <span class="text-taxi-yellow font-bold">11.000đ/km</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-zinc-800/50 p-4 rounded-xl mt-4">
+                            <span class="text-white font-bold">Đi Tỉnh / Đường Dài</span>
+                            <span class="text-green-500 font-black">Liên hệ báo giá tốt nhất</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-20 bg-slate-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">Dịch Vụ Nổi Bật</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border-b-4 border-yellow-400">
-                    <div class="mb-4 inline-block p-3 bg-yellow-50 rounded-xl"><i data-lucide="users" class="text-yellow-600"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Taxi Gia Đình</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Phục vụ đi đám cưới, tiệc tùng, đưa đón người bệnh đi tái khám tại các bệnh viện lớn.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border-b-4 border-yellow-400">
-                    <div class="mb-4 inline-block p-3 bg-yellow-50 rounded-xl"><i data-lucide="plane-takeoff" class="text-yellow-600"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Sân Bay BMT</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Đưa đón từ Buôn Hồ đi sân bay Buôn Ma Thuột và ngược lại. Cam kết đúng giờ chuyến bay.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border-b-4 border-yellow-400">
-                    <div class="mb-4 inline-block p-3 bg-yellow-50 rounded-xl"><i data-lucide="map" class="text-yellow-600"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Taxi Liên Tỉnh</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Hợp đồng xe đường dài đi các tỉnh miền Trung, miền Nam với giá cước trọn gói siêu rẻ.</p>
-                </div>
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-zinc-950">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-white text-center mb-12 uppercase">Giải đáp <span class="text-taxi-yellow">thắc mắc</span></h2>
+            <div class="space-y-6">
+                <details class="group bg-black border border-gray-800 rounded-xl p-6 transition-all hover:border-taxi-yellow">
+                    <summary class="flex justify-between items-center font-bold text-white cursor-pointer list-none">
+                        <span>Taxi Buôn Hồ có phục vụ ban đêm không?</span>
+                        <span class="text-taxi-yellow group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-500 mt-4">Dạ có, chúng tôi phục vụ 24/7 bất kể ngày đêm hay lễ tết. Quý khách chỉ cần gọi trước 5-10 phút để chúng tôi điều phối xe gần nhất.</p>
+                </details>
+                <details class="group bg-black border border-gray-800 rounded-xl p-6 transition-all hover:border-taxi-yellow">
+                    <summary class="flex justify-between items-center font-bold text-white cursor-pointer list-none">
+                        <span>Làm sao để đặt xe đi Sân bay Buôn Ma Thuột?</span>
+                        <span class="text-taxi-yellow group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-500 mt-4">Quý khách nên gọi hotline hoặc nhắn Zalo đặt lịch trước ít nhất 30 phút để chúng tôi sắp xếp xe đời mới, đảm bảo lịch trình bay không bị gián đoạn.</p>
+                </details>
+                <details class="group bg-black border border-gray-800 rounded-xl p-6 transition-all hover:border-taxi-yellow">
+                    <summary class="flex justify-between items-center font-bold text-white cursor-pointer list-none">
+                        <span>Xe có hóa đơn hoặc biên lai không?</span>
+                        <span class="text-taxi-yellow group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-500 mt-4">Chúng tôi có cung cấp phiếu thu hoặc biên lai nếu khách hàng có nhu cầu để thanh toán với công ty.</p>
+                </details>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-taxi-yellow text-black">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase">Đang ở Buôn Hồ? Gọi ngay Taxi!</h2>
+            <p class="text-black/70 text-lg mb-10 font-medium">Bấm vào nút bên dưới để được đón ngay chỉ trong 5 phút.</p>
+            <a href="tel:0972138242" class="bg-black text-taxi-yellow px-12 py-6 rounded-2xl text-2xl font-black shadow-2xl hover:bg-zinc-800 transition-all inline-flex items-center">
+                <i class="fas fa-phone-alt mr-4"></i> GỌI 0972.138.242
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex items-center justify-center space-x-2 mb-8">
-                <i data-lucide="car" class="text-yellow-400 w-8 h-8"></i>
-                <span class="text-2xl font-black tracking-tighter italic">TAXI <span class="text-yellow-400 font-mono">0854.593.879</span></span>
+    <footer class="bg-black border-t border-gray-900 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 mb-8">
+                        <div class="bg-taxi-yellow p-2 rounded-lg">
+                            <i class="fas fa-taxi text-black text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-white uppercase">Taxi <span class="text-taxi-yellow">Buôn Hồ</span></span>
+                    </div>
+                    <p class="text-gray-500 max-w-sm mb-8 leading-relaxed">Dịch vụ vận tải hành khách hàng đầu tại Buôn Hồ, Đắk Lắk. Chúng tôi tự hào là đơn vị tin cậy của hàng ngàn khách hàng trong suốt thời gian qua.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-500 hover:text-taxi-yellow hover:border-taxi-yellow transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-500 hover:text-taxi-yellow hover:border-taxi-yellow transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-8 uppercase tracking-widest">Liên kết</h4>
+                    <ul class="text-gray-500 space-y-4 text-sm">
+                        <li><a href="index.html" class="hover:text-taxi-yellow transition">Trang chủ</a></li>
+                        <li><a href="#about" class="hover:text-taxi-yellow transition">Giới thiệu</a></li>
+                        <li><a href="#services" class="hover:text-taxi-yellow transition">Dịch vụ</a></li>
+                        <li><a href="privacy.html" class="hover:text-taxi-yellow transition font-bold">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-8 uppercase tracking-widest">Liên hệ</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-taxi-yellow mt-1 mr-4"></i>
+                            <span class="text-white font-bold text-lg">0972.138.242</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-taxi-yellow mt-1 mr-4"></i>
+                            <span class="text-gray-500">Buôn Hồ, Đắk Lắk</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-taxi-yellow mt-1 mr-4"></i>
+                            <span class="text-gray-500">info@taxibuonho.vn</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="text-slate-400 mb-8 max-w-md mx-auto">Taxi Buôn Hồ - Đắk Lắk. Sự lựa chọn hàng đầu cho mỗi hành trình của bạn.</p>
-            <div class="flex justify-center space-x-6 text-sm mb-12">
-                <a href="#services" class="text-slate-300 hover:text-yellow-400 transition">Dịch vụ</a>
-                <a href="privacy.html" class="text-slate-300 hover:text-yellow-400 transition font-bold border-b border-yellow-400">Quyền riêng tư</a>
-            </div>
-            <div class="pt-8 border-t border-slate-800 text-[10px] text-slate-500">
-                &copy; 2025 Taxi Buôn Hồ. Tất cả thông tin đều được bảo mật.
+            <div class="mt-20 pt-8 border-t border-gray-900 text-center text-gray-600 text-xs">
+                <p>&copy; 2024 TAXI BUÔN HỒ. Website phục vụ quảng bá dịch vụ taxi tại địa phương.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Nút gọi Floating -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <a href="tel:0854593879" class="taxi-yellow text-slate-900 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl glow ring-4 ring-yellow-400/20 animate-bounce">
-            <i data-lucide="phone" class="w-8 h-8"></i>
+    <!-- Mobile Navigation Fixed -->
+    <div class="md:hidden fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <a href="https://zalo.me/0972138242" target="_blank" class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl shadow-xl">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:0972138242" class="w-16 h-16 bg-taxi-yellow rounded-full flex items-center justify-center text-black text-2xl shadow-2xl animate-pulse-yellow border-2 border-black">
+            <i class="fas fa-phone-alt"></i>
         </a>
     </div>
 
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
 
