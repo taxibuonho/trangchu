@@ -3,117 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chính sách quyền riêng tư - Taxi Buôn Hồ</title>
+    <title>Chính Sách Quyền Riêng Tư - Taxi Buôn Hồ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Lexend', sans-serif; }
-        .taxi-yellow { background-color: #facc15; }
-        .taxi-dark { background-color: #1c1c1c; }
-        .glow { box-shadow: 0 0 15px rgba(250, 204, 21, 0.4); }
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
+        body { font-family: 'Lexend', sans-serif; scroll-behavior: smooth; }
+        .bg-taxi-yellow { background-color: #facc15; }
+        .text-taxi-yellow { color: #facc15; }
+        .btn-taxi { background-color: #facc15; color: #000; transition: all 0.3s; border: 2px solid #facc15; }
+        .btn-taxi:hover { background-color: transparent; color: #facc15; transform: translateY(-2px); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-black text-gray-200 leading-relaxed">
 
-    <!-- Header có nút gọi nhanh -->
-    <header class="taxi-dark text-white py-3 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2 group">
-                <i data-lucide="arrow-left" class="text-yellow-400 w-6 h-6 group-hover:-translate-x-1 transition-transform"></i>
-                <span class="font-bold text-sm md:text-base uppercase tracking-tight">Trang chủ</span>
-            </a>
-            
-            <a href="tel:0854593879" class="taxi-yellow text-black px-4 py-2 rounded-full font-bold flex items-center space-x-2 hover:bg-yellow-300 transition scale-105 shadow-lg">
-                <i data-lucide="phone-call" class="w-4 h-4"></i>
-                <span class="text-sm md:text-base">0854.593.879</span>
-            </a>
-        </div>
-    </header>
-
-    <!-- Nội dung chính sách -->
-    <main class="container mx-auto px-4 py-12 max-w-4xl">
-        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
-            <h1 class="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900 border-b pb-4">Chính sách quyền riêng tư</h1>
-            
-            <div class="space-y-8 leading-relaxed text-gray-700">
-                <section>
-                    <h2 class="text-xl font-bold mb-4 flex items-center text-yellow-600">
-                        <i data-lucide="shield-check" class="w-6 h-6 mr-2 text-yellow-500"></i> 1. Thu thập thông tin cá nhân
-                    </h2>
-                    <p>Khi quý khách sử dụng dịch vụ hoặc đặt xe qua website **Taxi Buôn Hồ**, chúng tôi có thể thu thập các thông tin sau:</p>
-                    <ul class="list-disc ml-6 mt-3 space-y-2">
-                        <li>Họ và tên khách hàng để tiện xưng hô.</li>
-                        <li>Số điện thoại liên lạc để tài xế gọi xác nhận.</li>
-                        <li>Địa chỉ điểm đón và điểm đến để định vị lộ trình.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold mb-4 flex items-center text-yellow-600">
-                        <i data-lucide="eye" class="w-6 h-6 mr-2 text-yellow-500"></i> 2. Mục đích sử dụng thông tin
-                    </h2>
-                    <p>Thông tin của quý khách chỉ được sử dụng cho các mục đích:</p>
-                    <ul class="list-disc ml-6 mt-3 space-y-2">
-                        <li>Xác nhận yêu cầu đặt xe nhanh chóng.</li>
-                        <li>Điều phối tài xế gần nhất để tiết kiệm thời gian chờ đợi.</li>
-                        <li>Nâng cao chất lượng phục vụ khách hàng tại khu vực Buôn Hồ.</li>
-                    </ul>
-                </section>
-
-                <section class="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
-                    <h2 class="text-xl font-bold mb-4 flex items-center text-gray-900">
-                        <i data-lucide="lock" class="w-6 h-6 mr-2 text-yellow-500"></i> 3. Bảo mật thông tin
-                    </h2>
-                    <p>Chúng tôi cam kết bảo mật tuyệt đối thông tin cá nhân của quý khách. Chúng tôi không bao giờ chia sẻ thông tin khách hàng cho bất kỳ bên thứ ba nào vì mục đích quảng cáo hay thương mại.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold mb-4 flex items-center text-yellow-600">
-                        <i data-lucide="phone" class="w-6 h-6 mr-2 text-yellow-500"></i> 4. Liên hệ hỗ trợ
-                    </h2>
-                    <p>Nếu quý khách có thắc mắc về chính sách hoặc cần đặt xe gấp, vui lòng gọi trực tiếp:</p>
-                    <div class="mt-6 flex flex-col sm:flex-row items-center gap-4">
-                        <div class="p-5 bg-taxi-dark taxi-dark text-white rounded-2xl border border-gray-700 w-full sm:w-auto text-center">
-                            <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Tổng đài 24/7</p>
-                            <p class="text-2xl font-bold text-yellow-400">0854.593.879</p>
-                        </div>
-                        <a href="tel:0854593879" class="taxi-yellow text-black font-bold px-8 py-4 rounded-2xl hover:bg-yellow-300 transition shadow-xl flex items-center justify-center space-x-2 w-full sm:w-auto">
-                            <i data-lucide="phone-forwarded" class="w-5 h-5"></i>
-                            <span>GỌI ĐẶT XE NGAY</span>
-                        </a>
+    <!-- Header / Navigation -->
+    <nav class="fixed w-full z-50 bg-black/95 border-b border-gray-800 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="bg-taxi-yellow p-2 rounded-lg">
+                        <i class="fas fa-taxi text-black text-2xl"></i>
                     </div>
+                    <span class="text-xl font-bold tracking-tighter text-white uppercase">Taxi <span class="text-taxi-yellow">Buôn Hồ</span></span>
+                </a>
+                
+                <div class="hidden lg:flex space-x-8 text-sm uppercase tracking-widest">
+                    <a href="index.html" class="hover:text-taxi-yellow transition">Trang chủ</a>
+                    <a href="privacy.html" class="text-taxi-yellow font-bold transition border-b-2 border-taxi-yellow">Chính sách</a>
+                </div>
+
+                <div class="flex items-center">
+                    <a href="tel:0972138242" class="btn-taxi px-6 py-2.5 rounded-full font-bold text-sm flex items-center shadow-lg shadow-yellow-500/20">
+                        <i class="fas fa-phone-alt mr-2"></i> 0972.138.242
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <main class="pt-32 pb-24 max-w-5xl mx-auto px-4">
+        <div class="bg-zinc-900 p-8 md:p-16 rounded-[40px] border border-gray-800 shadow-2xl relative overflow-hidden">
+            <!-- Decorative car icon in background -->
+            <div class="absolute top-10 right-10 opacity-5 pointer-events-none">
+                <i class="fas fa-shield-alt text-9xl"></i>
+            </div>
+
+            <nav class="flex mb-8 text-sm text-gray-500">
+                <a href="index.html" class="hover:text-taxi-yellow transition">Trang chủ</a>
+                <span class="mx-2">/</span>
+                <span class="text-taxi-yellow">Chính sách quyền riêng tư</span>
+            </nav>
+
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
+                Chính Sách <span class="text-taxi-yellow">Quyền Riêng Tư</span>
+            </h1>
+            <p class="text-gray-400 mb-12 italic">Cập nhật lần cuối: Ngày 16 tháng 03 năm 2024</p>
+            
+            <div class="space-y-12">
+                <!-- Section 1 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="bg-taxi-yellow text-black w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">01</span>
+                        Cam Kết Của Chúng Tôi
+                    </h2>
+                    <p class="text-gray-400">
+                        Taxi Buôn Hồ hiểu rằng quyền riêng tư của quý khách là vô cùng quan trọng. Chúng tôi cam kết bảo vệ thông tin cá nhân mà khách hàng cung cấp khi sử dụng dịch vụ đặt xe thông qua số Hotline 0972.138.242. Chính sách này mô tả cách chúng tôi thu thập, sử dụng và bảo mật thông tin của bạn để đảm bảo trải nghiệm dịch vụ an toàn nhất.
+                    </p>
+                </section>
+
+                <!-- Section 2 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="bg-taxi-yellow text-black w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">02</span>
+                        Thông Tin Chúng Tôi Thu Thập
+                    </h2>
+                    <p class="text-gray-400 mb-4">Để thực hiện một chuyến xe, chúng tôi thu thập các thông tin cơ bản bao gồm:</p>
+                    <ul class="grid md:grid-cols-2 gap-4">
+                        <li class="bg-black/50 p-4 rounded-xl border border-gray-800">
+                            <strong class="text-taxi-yellow block mb-1">Thông tin liên lạc:</strong>
+                            Số điện thoại mà quý khách dùng để gọi đến tổng đài.
+                        </li>
+                        <li class="bg-black/50 p-4 rounded-xl border border-gray-800">
+                            <strong class="text-taxi-yellow block mb-1">Thông tin vị trí:</strong>
+                            Điểm đón khách và điểm đến mà khách hàng yêu cầu.
+                        </li>
+                        <li class="bg-black/50 p-4 rounded-xl border border-gray-800">
+                            <strong class="text-taxi-yellow block mb-1">Thông tin chuyến đi:</strong>
+                            Thời gian đặt xe, loại xe yêu cầu (4 chỗ hoặc 7 chỗ).
+                        </li>
+                        <li class="bg-black/50 p-4 rounded-xl border border-gray-800">
+                            <strong class="text-taxi-yellow block mb-1">Thông tin phản hồi:</strong>
+                            Các nhận xét về chất lượng phục vụ hoặc báo cáo về hành lý thất lạc.
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Section 3 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="bg-taxi-yellow text-black w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">03</span>
+                        Mục Đích Sử Dụng Thông Tin
+                    </h2>
+                    <p class="text-gray-400 mb-4">Chúng tôi chỉ sử dụng thông tin của bạn vào những mục đích hợp pháp sau đây:</p>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <i class="fas fa-check text-taxi-yellow mt-1"></i>
+                            <p><strong class="text-white">Điều phối xe:</strong> Gửi thông tin vị trí của bạn cho tài xế gần nhất để đón khách kịp thời.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-check text-taxi-yellow mt-1"></i>
+                            <p><strong class="text-white">Liên lạc:</strong> Tài xế gọi điện xác nhận điểm đón hoặc thông báo khi xe đã đến nơi.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-check text-taxi-yellow mt-1"></i>
+                            <p><strong class="text-white">Hỗ trợ khách hàng:</strong> Giải quyết các vấn đề phát sinh như quên hành lý trên xe hoặc khiếu nại về thái độ phục vụ.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-check text-taxi-yellow mt-1"></i>
+                            <p><strong class="text-white">An toàn:</strong> Giám sát lộ trình để đảm bảo an toàn cho cả khách hàng và tài xế trong suốt chuyến đi.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="bg-taxi-yellow text-black w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">04</span>
+                        Bảo Mật Và Chia Sẻ Thông Tin
+                    </h2>
+                    <div class="bg-black/30 p-6 rounded-2xl border-l-4 border-taxi-yellow">
+                        <p class="text-gray-400">
+                            Taxi Buôn Hồ <strong class="text-white">tuyệt đối không bán, cho thuê hoặc chia sẻ</strong> thông tin cá nhân của quý khách cho bất kỳ bên thứ ba nào vì mục đích quảng cáo hay tiếp thị. Thông tin chỉ được chia sẻ duy nhất với tài xế trực tiếp đón quý khách trong phạm vi một chuyến xe cụ thể. Sau khi chuyến xe kết thúc, tài xế không được phép lưu trữ hoặc sử dụng số điện thoại của khách hàng cho mục đích cá nhân.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 5 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="bg-taxi-yellow text-black w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">05</span>
+                        Quyền Lợi Và Trách Nhiệm Của Khách Hàng
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-white font-bold mb-2 italic underline underline-offset-4 decoration-taxi-yellow">Quyền lợi:</h4>
+                            <ul class="list-disc ml-5 text-gray-400 space-y-2">
+                                <li>Yêu cầu tài xế giữ bí mật về thông tin cá nhân và lộ trình di chuyển.</li>
+                                <li>Yêu cầu tổng đài xóa thông tin số điện thoại khỏi danh sách đặt xe nếu không còn nhu cầu sử dụng dịch vụ.</li>
+                                <li>Được hỗ trợ tìm kiếm hành lý thất lạc thông qua lịch sử chuyến đi.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-2 italic underline underline-offset-4 decoration-taxi-yellow">Trách nhiệm:</h4>
+                            <ul class="list-disc ml-5 text-gray-400 space-y-2">
+                                <li>Cung cấp chính xác số điện thoại và địa chỉ đón khách.</li>
+                                <li>Không sử dụng dịch vụ cho các mục đích vi phạm pháp luật hoặc vận chuyển hàng cấm.</li>
+                                <li>Cư xử lịch sự và văn minh với tài xế trong suốt hành trình.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 6 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="bg-taxi-yellow text-black w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">06</span>
+                        Thay Đổi Chính Sách
+                    </h2>
+                    <p class="text-gray-400">
+                        Chúng tôi có quyền cập nhật chính sách này bất kỳ lúc nào để phù hợp với quy định của pháp luật và cải thiện chất lượng dịch vụ. Các thay đổi sẽ được cập nhật trực tiếp tại trang web này. Việc quý khách tiếp tục gọi xe sau khi có thay đổi đồng nghĩa với việc chấp thuận các điều khoản mới.
+                    </p>
                 </section>
             </div>
 
-            <div class="mt-12 pt-8 border-t text-sm text-gray-400 italic text-center">
-                Cập nhật lần cuối: Tháng 2 năm 2025
+            <div class="mt-16 pt-8 border-t border-gray-800 text-center">
+                <p class="text-white font-bold mb-4">Mọi thắc mắc về chính sách bảo mật, vui lòng liên hệ:</p>
+                <div class="inline-flex flex-col md:flex-row items-center gap-6">
+                    <a href="tel:0972138242" class="text-2xl font-black text-taxi-yellow hover:scale-110 transition">
+                        <i class="fas fa-phone-alt mr-2"></i> 0972.138.242
+                    </a>
+                    <span class="hidden md:inline text-gray-700">|</span>
+                    <p class="text-gray-500 italic">Địa chỉ: Thị xã Buôn Hồ, Tỉnh Đắk Lắk</p>
+                </div>
+                <div class="mt-12">
+                    <a href="index.html" class="inline-flex items-center text-gray-400 hover:text-white transition group">
+                        <i class="fas fa-long-arrow-alt-left mr-2 group-hover:-translate-x-2 transition"></i> Quay về Trang Chủ
+                    </a>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer đơn giản -->
-    <footer class="bg-gray-100 py-10 border-t">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex items-center justify-center space-x-2 mb-4">
-                <i data-lucide="car" class="text-yellow-500 w-6 h-6"></i>
-                <span class="font-bold text-gray-800 uppercase tracking-tighter">Taxi Buôn Hồ</span>
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-6">
+                <i class="fas fa-taxi text-taxi-yellow"></i>
+                <span class="text-white font-bold uppercase tracking-tighter">Taxi Buôn Hồ</span>
             </div>
-            <p class="font-bold text-gray-700">0854.593.879</p>
-            <p class="text-sm text-gray-500 mt-2">Phục vụ tận tâm - An toàn trên mọi nẻo đường.</p>
+            <p class="text-gray-600 text-sm italic">Cung cấp dịch vụ vận tải an toàn - Chuyên nghiệp - Bảo mật tuyệt đối tại Buôn Hồ.</p>
+            <p class="text-gray-700 text-[10px] mt-4 uppercase">© 2024 TAXI BUÔN HỒ. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
-    <!-- Mobile Sticky Call Button (Giống trang chủ) -->
-    <div class="md:hidden fixed bottom-8 right-6 z-50">
-        <a href="tel:0854593879" class="taxi-yellow text-black w-16 h-16 rounded-full flex items-center justify-center shadow-2xl glow ring-4 ring-yellow-400/20 animate-bounce">
-            <i data-lucide="phone" class="w-8 h-8"></i>
-        </a>
-    </div>
-
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
 
